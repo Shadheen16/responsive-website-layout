@@ -69,11 +69,11 @@ a{
  ==================================*/
  #top-banner{
      min-height:100vh;
-     width:100%;
+     min-width:100%;
      color:var(--banner-text-clr);
      background:var(--secondary-clr);
      display:flex;
-     justify-content:space-evenly;
+     justify-content:center;
      align-items:center;
      margin-bottom: 4.6875rem;
  }
@@ -83,6 +83,7 @@ a{
  }
  .half-width{
      width:34.75rem;
+     height:auto;
  }
 .half-width img{
     width:100%;
@@ -106,16 +107,43 @@ a{
 /*//////////media queries\\\\\\\\\\\*/
 
 /* for mobile devices */
-@media (max-width: 43em) {
+@media screen and (max-width: 43em){
     #top-banner{
         flex-direction: column;
+        justify-content:center;
+        /* min-height:100vh; */
+        width:auto;
+        margin:0;
+        margin-bottom: 1.125rem;
+        
     }
     #top-banner h1{
         color:var(--banner-text-clr);
-        font-size:1.5rem;
+        font-size:1em;
      }
      .half-width{
-        width:12rem;
+        width:20rem;
+        margin-top: 1.875rem;
+    }
+}
+/* for tablet devices */
+@media screen and (max-width: 62em) {
+    #top-banner{
+        flex-direction: column;
+        justify-content:center;
+        min-height:100vh;
+        width:auto;
+        margin:0;
+        margin-bottom: 2.5rem;
+        
+    }
+    #top-banner h1{
+        color:var(--banner-text-clr);
+        font-size:3.25rem;
+     }
+     .half-width{
+        width:20rem;
+        margin-top: 2.5rem;
     }
 }
 
@@ -156,6 +184,25 @@ a{
     height:auto;
 }
 
+/*//////////media queries\\\\\\\\\\\*/
+
+/* for mobile devices */
+@media screen and (max-width: 43em){
+    #players{
+    grid-template-columns:1fr 1fr;
+}
+}
+
+
+
+/* for tablet devices */
+
+@media screen and (max-width:62em){}
+#players{
+    grid-template-columns:1fr;
+}
+
+    
 /*==================================
             highlights section         
  ==================================*/
@@ -175,6 +222,22 @@ a{
 .article p{
     margin-bottom: 1.875rem;
 }
+
+@media screen and (max-width: 43em){
+    #highlights{
+        max-width:95%;
+        height: auto;
+       margin-bottom: 9.375rem;
+    }
+    .article img{
+        display:none;
+    }
+    
+}
+@media screen and (max-width: 62em){
+    
+}
+
  /*==================================
             gallery section      
  ==================================*/
@@ -252,6 +315,12 @@ p{
    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
 
 }
+
+@media screen and (max-width:62em){
+    .container{
+        grid-template-columns:1fr;
+    }
+}
  /*==================================
             footer section         
  ==================================*/
@@ -273,4 +342,11 @@ p{
  footer p{
      font-size:1.125rem;
      color:var(--primary-clr);
+ }
+
+ @media screen and (max-width:63em) {
+     .logo img{
+         width:271px;
+         height:63;
+     }
  }
