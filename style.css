@@ -68,6 +68,8 @@ a{
             top-banner section          
  ==================================*/
  #top-banner{
+    max-width: 100%;
+    min-height: 100vh;
      color:var(--banner-text-clr);
      background:var(--secondary-clr);
      display:flex;
@@ -152,9 +154,9 @@ a{
 
 /* for tablet devices */
 
-  @media only screen and (min-width:62.0625) and (max-width:90em){
+  @media only screen and (min-width:62.0625) and (max-width:90){
     #top-banner{
-        max-width:100%;
+        max-width:50%;
         min-height:100vh;
     }
      
